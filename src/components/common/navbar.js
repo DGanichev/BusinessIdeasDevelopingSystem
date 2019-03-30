@@ -11,6 +11,7 @@ const Navbar = () => (
         </div>
         <div className="navbar-nav">
             <li className="nav-item">
+                <span className="navbar-text"><img src="/src/images/default_pic.png" className="rounded" width="32px" height="32px" alt=""/></span>
                 <span className="navbar-text">{UserService.getLoggedInUser().username}</span>
             </li>
             <li className="nav-item pl-3">
