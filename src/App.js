@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import {Home} from "./containers";
-import Projects from "./containers/projects";
-import Footer from "./components/common/footer";
+import {Home, Projects} from "./containers";
+import {Footer} from "./components/common";
 
 class App extends Component {
 
