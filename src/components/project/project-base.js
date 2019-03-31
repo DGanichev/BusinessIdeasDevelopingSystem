@@ -1,14 +1,14 @@
 import React from 'react';
 
 const ProjectBase = ({name, description, date, users}) => (
-    <div className="card">
-        <div className="card-header">
+    <div className="card border-primary">
+        <div className="card-header bg-transparent">
             {name}
         </div>
-        <div className="card-body">
+        <div className="card-body bg-transparent">
             <div className="card-text">{description}</div>
         </div>
-        <div className="card-footer text-center">
+        <div className="card-footer text-center bg-transparent">
             <span className="card-text pr-3"><i className="far fa-clock pr-1"></i>{date}</span>
             <span className="card-text pr-3">
                 <a href="#" className="white-text">

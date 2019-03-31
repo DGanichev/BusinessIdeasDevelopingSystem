@@ -34,13 +34,13 @@ class Projects extends React.PureComponent {
                 <div className="container">
                     <div className="mt-2 p-3 mb-2 bg-light text-dark rounded">
                         <h1>My projects</h1>
+                        <ProjectBaseList projects={this.state.myProjects}/>
                     </div>
-                    <ProjectBaseList projects={this.state.myProjects}/>
                     <hr />
                     <div className="mt-2 p-3 mb-2 bg-light text-dark rounded">
                         <h1>Projects invited to</h1>
+                        <ProjectBaseList projects={this.state.projectsInvitedTo}/>
                     </div>
-                    <ProjectBaseList projects={this.state.projectsInvitedTo}/>
                 </div>
             </div>
         );
