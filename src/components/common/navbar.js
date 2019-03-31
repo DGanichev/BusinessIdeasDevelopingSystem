@@ -12,7 +12,7 @@ const Navbar = () => (
         <div className="navbar-nav">
             <li className="nav-item">
                 <Link to="/user/edit" className="nav-link">
-                    <img src="/images/default_pic.png" className="rounded" width="26px" height="26px" alt=""/>
+                    <img src="/images/default_pic.png" className="rounded mr-2" width="26px" height="26px" alt=""/>
                     {UserService.getLoggedInUser().username}
                 </Link>
             </li>
