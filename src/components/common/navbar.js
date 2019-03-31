@@ -11,7 +11,7 @@ const Navbar = () => (
         </div>
         <div className="navbar-nav">
             <li className="nav-item">
-                <span className="navbar-text">{UserService.getLoggedInUser().username}</span>
+                <Link to="/user/edit" className="nav-link">{UserService.getLoggedInUser().username}</Link>
             </li>
             <li className="nav-item pl-3">
                 <Link to="/" className="nav-link">Logout</Link>
