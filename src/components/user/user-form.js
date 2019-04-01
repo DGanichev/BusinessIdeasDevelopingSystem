@@ -68,6 +68,7 @@ class UserForm extends React.PureComponent {
                         </div>
                     ))}
                 </div>
+				<button type="button" className="mt-4 btn btn-primary btn-block">Save</button>
             </form>
         );
     }
