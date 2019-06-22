@@ -1,21 +1,28 @@
-import React from 'react';
+import React from "react";
 import {Navbar} from "../components/common";
-import UserForm from "../components/user/user-form";
+import {ProjectCreateForm} from "../components/project";
 
-class UserEdit extends React.PureComponent {
+class ProjectCreate extends React.PureComponent {
+    constructor(props) {
+        super(props);
 
-    render() {
+        this.state = {
+        };
+    }
+
+
+    render () {
         return (
-            <div className="user-edit">
+            <div className="project-create">
                 <Navbar/>
                 <div className="row justify-content-center mt-4">
                     <div className="col-md-8">
                         <div className="card">
                             <div className="card-header text-center">
-                                Edit profile
+                                Create new project
                             </div>
                             <div className="card-body">
-                                <UserForm/>
+                                <ProjectCreateForm />
                             </div>
                         </div>
                     </div>
@@ -23,7 +30,6 @@ class UserEdit extends React.PureComponent {
             </div>
         );
     }
-
 }
 
-export default UserEdit;
+export default ProjectCreate;
