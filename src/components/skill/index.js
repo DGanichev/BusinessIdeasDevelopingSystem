@@ -1,2 +1,2 @@
-export {default as SkillArea} from './skill-area';
-export {default as SkillList} from './skill-list';
+export {default as SkillArea} from './skills-card';
+export {default as SkillList} from './skills-list';

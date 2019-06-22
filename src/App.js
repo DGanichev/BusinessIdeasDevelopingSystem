@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import {Home, Projects, UserEdit, ProjectCreate, ProjectDetails} from "./containers";
+import {Home, Projects, UserEdit, ProjectCreate, ProjectDetails, ProjectEdit} from "./containers";
 import {Footer} from "./components/common";
 
 class App extends Component {
@@ -13,6 +13,7 @@ class App extends Component {
                     <Route path="/projects" exact component={Projects}/>
                     <Route path="/projects/create" exact component={ProjectCreate}/>
                     <Route path="/projects/details/:projectId" exact component={ProjectDetails}/>
+                    <Route path="/projects/edit/:projectId" exact component={ProjectEdit}/>
                     <Route path="/user/edit" exact component={UserEdit}/>
                     <Redirect to="/"/>
                 </Switch>

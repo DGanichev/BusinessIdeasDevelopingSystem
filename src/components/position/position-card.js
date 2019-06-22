@@ -1,12 +1,12 @@
 import React from "react";
-import SkillArea from "../skill/skill-area";
+import SkillsCard from "../skill/skills-card";
 
-class PositionArea extends React.PureComponent {
+class PositionCard extends React.PureComponent {
     constructor(props) {
         super(props);
 
         this.state = {
-            skills: [1, 2],
+            skills: this.props.data && this.props.data || [1, 2],
         };
     }
 
@@ -19,20 +19,21 @@ class PositionArea extends React.PureComponent {
     };
 
     render() {
+        const {data, name} = this.props;
         const {skills} = this.state;
         return (
             <div className="list-group-item">
-                <p>Position </p>
+                <p>{ name ? name : "Position" }</p>
                 <div className="row">
                     <div className="col-md-10">
                     {
                         skills.map(el =>
-                            <SkillArea key={el} />
+                            <SkillsCard key={data && el.skill ? el.skill : el} name={el.skill} value={el.level} />
                         )
                     }
                     </div>
                     <div className="col-md-2 m-auto">
-                        <button className="btn btn-primary m-auto" onClick={this.addNewSkill}>Add</button>
+                        <i className="fas fa-plus-circle fa-2x" onClick={this.addNewSkill}></i>
                     </div>
                 </div>
             </div>
@@ -40,4 +41,4 @@ class PositionArea extends React.PureComponent {
     }
 }
 
-export default PositionArea;
+export default PositionCard;

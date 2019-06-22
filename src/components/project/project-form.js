@@ -1,7 +1,7 @@
 import React from "react";
-import {PositionArea} from '../position';
+import {PositionCard} from '../position';
 
-class ProjectCreateForm extends React.PureComponent {
+class ProjectForm extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +19,10 @@ class ProjectCreateForm extends React.PureComponent {
     };
 
     render() {
+        const { data } = this.props;
+        data && this.setState({
+            positions: data.positions,
+        });
         const { positions } = this.state;
         return (
             <form onSubmit={e => {
@@ -26,24 +30,24 @@ class ProjectCreateForm extends React.PureComponent {
                 //this.props.onSubmit()
             }}>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="projectName" aria-describedby="projectNameHelp"
-                           placeholder="Project name"/>
+                    <input type="text" value={data && data.name ? data.name : ""} className="form-control" id="projectName" aria-describedby="projectNameHelp"
+                           placeholder="Project name" onChange={()=>{}}/>
                 </div>
                 <div className="form-group">
-                    <textarea rows="5" className="form-control" id="description" aria-describedby="descriptionHelp"
-                           placeholder="Project description"/>
+                    <textarea rows="5" value={data && data.description ? data.description : ""} className="form-control" id="description" aria-describedby="descriptionHelp"
+                           placeholder="Project description" onChange={()=>{}}/>
                 </div>
                 <div className="form-group">
                     {
-                        positions.map(el => (
-                            <PositionArea key={el}/>
+                        positions && positions.map(el => (
+                            <PositionCard key={data && el.name ? el.name : el} data={el.skills} name={el.name} />
                         ))
                     }
                 </div>
                 <div className="form-group">
                     <div className="row">
                         <div className="col-md-4">
-                            <button type="button" className="btn btn-primary" onClick={()=>{}}>Add position</button>
+                            <button type="button" className="btn btn-primary" onClick={this.addNewPosition}>Add position</button>
                         </div>
                     </div>
                 </div>
@@ -62,4 +66,4 @@ class ProjectCreateForm extends React.PureComponent {
     }
 }
 
-export default ProjectCreateForm;
+export default ProjectForm;

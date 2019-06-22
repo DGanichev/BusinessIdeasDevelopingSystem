@@ -1,15 +1,8 @@
 import React from "react";
 import {Navbar} from "../components/common";
-import {ProjectCreateForm} from "../components/project";
+import {ProjectForm} from "../components/project";
 
 class ProjectCreate extends React.PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-        };
-    }
-
 
     render () {
         return (
@@ -22,7 +15,7 @@ class ProjectCreate extends React.PureComponent {
                                 Create new project
                             </div>
                             <div className="card-body">
-                                <ProjectCreateForm />
+                                <ProjectForm />
                             </div>
                         </div>
                     </div>

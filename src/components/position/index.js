@@ -1,1 +1,1 @@
-export {default as PositionArea} from './position-area';
+export {default as PositionCard} from './position-card';
