@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectBase = ({name, description, date, users}) => (
+const ProjectBase = ({id, name, description, date, users}) => (
     <div className="card border-primary">
         <div className="card-header bg-transparent">
             {name}
@@ -14,7 +14,7 @@ const ProjectBase = ({name, description, date, users}) => (
 				<i className="fas fa-users">{users}</i>
             </span>
             <span className="card-text pr-3">
-                <a href="#" className="white-text">
+                <a href={`/projects/details/${id}`} className="white-text">
                     <i className="fas fa-info-circle"></i>
                 </a>
             </span>
