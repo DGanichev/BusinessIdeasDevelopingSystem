@@ -25,13 +25,16 @@ class Home extends React.PureComponent {
                     <div className="row">
                         <div className="col-md-8">
                             <div className="jumbotron">
-                                <h1 className="display-4">Hello, world!</h1>
-                                <p className="lead">This is a simple hero unit, a simple jumbotron-style component for
-                                    calling extra attention to featured content or information.</p>
-                                <hr className="my-4"/>
-                                <p>It uses utility class for typography and spacing to space content out
-                                    within the larger container.</p>
-                                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+							<h1>Business Ideas Developing System</h1>
+                                <p>
+								Many people have potentially profitable ideas. Did you know that many have imagined the iPhone, virtual reality and services like Uber years before they become reality?
+								</p>
+								<hr />
+								<p>
+								There is a big difference between thinking about something and doing it in practice. Many people have difficulty in creating the right team with the right people.
+								</p>
+								<hr />
+								<p>The system will help create good teams that have the ability to realize an idea.</p>
                             </div>
                         </div>
                         <div className="col-md-4">

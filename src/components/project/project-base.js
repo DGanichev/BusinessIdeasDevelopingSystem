@@ -11,9 +11,7 @@ const ProjectBase = ({name, description, date, users}) => (
         <div className="card-footer text-center bg-transparent">
             <span className="card-text pr-3"><i className="far fa-clock pr-1"></i>{date}</span>
             <span className="card-text pr-3">
-                <a href="#" className="white-text">
-                    <i className="fas fa-users">{users}</i>
-                </a>
+				<i className="fas fa-users">{users}</i>
             </span>
             <span className="card-text pr-3">
                 <a href="#" className="white-text">
