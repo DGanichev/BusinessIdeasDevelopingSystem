@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TableRow = ({data}) => (
+const TableRow = ({type = "profiles", data}) => (
     <tr>
-        <th scope="row"><a href="#">{data.username}</a></th>
+        {type === "profiles" ? <th scope="row"><a href="#">{data.username}</a></th> : null}
         <td>{data.projectName}</td>
         <td>{data.position}</td>
         <td><a href="#" className="btn btn-primary btn-block">Message</a></td>

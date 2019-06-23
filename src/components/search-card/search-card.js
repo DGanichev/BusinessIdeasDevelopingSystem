@@ -32,7 +32,7 @@ class SearchCard extends React.PureComponent {
     }
 
     render() {
-        const {data, type = 'profiles'} = this.props;
+        const {data = [], type = 'profiles'} = this.props;
         const {projectName, projectPosition, skills} = this.state;
         const positions = data.find(item => item.name === projectName) && data.find(item => item.name === projectName).positions;
         return (
