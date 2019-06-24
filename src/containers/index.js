@@ -6,3 +6,4 @@ export {default as UserEdit} from './user-edit';
 export {default as ProjectEdit} from './project-edit';
 export {default as SearchProfiles} from './search-profiles';
 export {default as SearchProjects} from './search-projects';
+export {default as UserProfile} from './user-profile';

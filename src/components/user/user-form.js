@@ -18,6 +18,17 @@ class UserForm extends React.PureComponent {
                 }
             ],
         };
+
+        this.addSkill = this.addSkill.bind(this);
+    }
+
+    addSkill() {
+        const {skills} = this.state;
+        const arr = [...skills];
+        arr.push({name: '', value: 1});
+        this.setState({
+            skills: arr
+        })
     }
 
     render() {
@@ -38,13 +49,25 @@ class UserForm extends React.PureComponent {
                     <input type="text" className="form-control" id="lastName" aria-describedby="lastNameHelp"
                            placeholder="Last name"/>
                 </div>
+                <div className="form-group">
+                    <input type="text" className="form-control" id="lastName" aria-describedby="mobileNumHelp"
+                           placeholder="Mobile number"/>
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control" id="lastName" aria-describedby="emailHelp"
+                           placeholder="E-mail"/>
+                </div>
+                <div className="form-group">
+                    <textarea type="text" className="form-control" rows="5" id="lastName" aria-describedby="descriptionHelp"
+                           placeholder="Description"/>
+                </div>
                 <div className="list-group">
                     {this.state.skills.map(skill => (
                         <div className="list-group-item" key={skill.name}>
                             <div className="form-group">
                                 <input type="text" className="form-control" id="username"
                                        aria-describedby="usernameHelp"
-                                       placeholder="Username" value={skill.name} onChange={()=>{}}/>
+                                       placeholder="Skill" value={skill.name} onChange={()=>{}}/>
                             </div>
                             <Slider
                                 min={1}
@@ -67,6 +90,13 @@ class UserForm extends React.PureComponent {
                             />
                         </div>
                     ))}
+                </div>
+                <div className="form-group mt-2">
+                    <div className="row">
+                        <div className="col-md-4">
+                            <button type="button" className="btn btn-primary" onClick={this.addSkill}>Add skill</button>
+                        </div>
+                    </div>
                 </div>
 				<button type="button" className="mt-4 btn btn-primary btn-block">Save</button>
             </form>
