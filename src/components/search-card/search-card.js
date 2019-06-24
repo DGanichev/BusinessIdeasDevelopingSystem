@@ -17,6 +17,7 @@ class SearchCard extends React.PureComponent {
 
         this.onProjectNameDropdownChange = this.onProjectNameDropdownChange.bind(this);
         this.onProjectPositionDropdownChange = this.onProjectPositionDropdownChange.bind(this);
+        this.addNewSkill = this.addNewSkill.bind(this);
     }
 
     onProjectNameDropdownChange(event) {
@@ -30,6 +31,15 @@ class SearchCard extends React.PureComponent {
             projectPosition: event.value
         })
     }
+
+    addNewSkill() {
+        const {skills} = this.state;
+        const arr = [...skills];
+        arr.push(arr.length + 1);
+        this.setState({
+            skills: arr,
+        });
+    };
 
     render() {
         const {data = [], type = 'profiles'} = this.props;

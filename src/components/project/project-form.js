@@ -5,16 +5,16 @@ class ProjectForm extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            positions: [1, 2, 3],
+            positions: [1, 2],
         };
     }
 
     addNewPosition = () => {
         const {positions} = this.state;
-        console.log(positions);
-        positions.push(positions.length + 1);
+        const arr = [...positions];
+        arr.push(arr.length + 1);
         this.setState({
-            skills: positions,
+            positions: arr,
         });
     };
 

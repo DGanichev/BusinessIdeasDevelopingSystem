@@ -61,7 +61,7 @@ class SearchProfiles extends React.PureComponent {
                                     <tbody className="text-center">
                                         {
                                             searchResults && searchResults.map(item => (
-                                                <TableRow data={item} />
+                                                <TableRow key={item.user_id} data={item} />
                                             ))
                                         }
                                     </tbody>

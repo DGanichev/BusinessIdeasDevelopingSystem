@@ -6,15 +6,16 @@ class PositionCard extends React.PureComponent {
         super(props);
 
         this.state = {
-            skills: this.props.data && this.props.data || [1, 2],
+            skills: this.props.data && this.props.data || [1],
         };
     }
 
     addNewSkill = () => {
         const {skills} = this.state;
-        skills.push(skills.length + 1);
+        const arr = [...skills];
+        arr.push(arr.length + 1);
         this.setState({
-            skills: skills,
+            skills: arr,
         });
     };
 
